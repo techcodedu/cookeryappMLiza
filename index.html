@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guess the Kitchen Tool</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div id="start-game">
+        <h1 class="text-center">Guess the Kitchen Tool</h1>
+        <input
+          type="text"
+          id="playerName"
+          class="form-control"
+          placeholder="Enter your name"
+        />
+        <button id="startButton" class="btn btn-success mt-3">
+          Start Game
+        </button>
+      </div>
+      <div id="game" class="text-center mt-4" style="display: none">
+        <img
+          id="image"
+          src=""
+          alt="Guess this kitchen tool"
+          class="img-fluid mb-3"
+        />
+        <div id="choices" class="d-grid gap-2 col-6 mx-auto"></div>
+        <button id="next" class="btn btn-info mt-3" style="display: none">
+          Next
+        </button>
+        <!-- Added Next Button -->
+        <div id="score-board" class="mt-3 text-center">
+          <h3 class="score-style">Score: <span id="score">0</span></h3>
+        </div>
+      </div>
+      <div id="leaderboard" style="display: none">
+        <h3 class="text-center">Leaderboard</h3>
+        <ol id="rankings" class="list-group">
+          <!-- Dynamically filled -->
+        </ol>
+      </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+  </body>
+</html>
